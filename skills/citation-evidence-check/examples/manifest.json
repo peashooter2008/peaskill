@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "document": {
+    "path": "draft.md"
+  },
+  "sources": [
+    {
+      "id": "seed-record",
+      "title": "虚构种子观察记录",
+      "origin": "invented-example: no real study or people",
+      "evidenceType": "full_text",
+      "snapshotPath": "source.txt",
+      "snapshotSha256": "6a861c9a6f43f56089d5e6134f5c70947d1bc17d4711316b45ad1df87680bf8a",
+      "retrievedAt": "2026-11-11T00:00:00Z"
+    }
+  ],
+  "snippets": [
+    {
+      "id": "seed-result",
+      "sourceId": "seed-record",
+      "text": "蓝色组共有四颗种子，其中三颗发芽。",
+      "context": "虚构教学记录。蓝色组共有四颗种子，其中三颗发芽。仅记录一次观察，不能推论普遍规律。",
+      "locator": "虚构文本第1段"
+    }
+  ],
+  "citations": [
+    {
+      "marker": "[1]",
+      "sourceId": "seed-record",
+      "snippetIds": [
+        "seed-result"
+      ],
+      "anchor": "在虚构试验中，蓝色组有三颗种子发芽。[1]"
+    }
+  ],
+  "review": {
+    "status": "pending"
+  }
+}

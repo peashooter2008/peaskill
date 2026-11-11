@@ -1,0 +1,4 @@
+interface:
+  display_name: "文献证据核验"
+  short_description: "核对引用与原文归属，保存证据快照，识别失效审核和待核实论断"
+  default_prompt: "使用 $citation-evidence-check 核对这份稿件的引用与证据，保留原稿并列出未通过的项目。"
