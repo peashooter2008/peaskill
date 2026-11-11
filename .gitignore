@@ -1,0 +1,13 @@
+node_modules/
+qa/
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.example
+test-results/
+playwright-report/
+.browsers/
+report.json
+.DS_Store

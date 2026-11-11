@@ -1,0 +1,10 @@
+{
+  "name": "peaskill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "从实际项目经验独立编写的三个 Codex 技能",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "python tools/run_checks.py" },
+  "devDependencies": { "playwright": "1.63.0" }
+}
