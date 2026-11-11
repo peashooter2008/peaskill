@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>离线微课：三个数的平均数</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">PEASKILL / 本地微课</p>
+    <h1>三个数的平均数</h1>
+    <p>虚构教学示例：先求 2、4、6 的总和，再除以个数。这个页面、笔记和附件均从本地提供。</p>
+    <section aria-labelledby="source-title">
+      <h2 id="source-title">看公式，再看源码</h2>
+      <p>平均数 = 总和 ÷ 个数。下方直接读取可下载的同一个 Python 文件。</p>
+      <pre id="code" data-source="numbers.py" aria-label="Python 源码">正在读取本地附件……</pre>
+      <a id="download-source" href="numbers.py" download>下载 numbers.py</a>
+      <div class="experiment">
+        <button id="run-example" type="button">演示计算</button>
+        <output id="result" aria-live="polite">尚未计算</output>
+      </div>
+      <p class="hint">按钮使用浏览器 JavaScript 演示公式。Python 附件需在本地 Python 环境单独运行；此页面未安装 Python 运行时。</p>
+    </section>
+    <section aria-labelledby="notes-title">
+      <h2 id="notes-title">记下你的理解</h2>
+      <label for="notes">学习笔记（保存在当前浏览器）</label>
+      <textarea id="notes" maxlength="50000" rows="5" placeholder="例如：先加起来，再除以 3。"></textarea>
+      <p id="status" role="status">笔记自动保存</p>
+      <div class="backup">
+        <button id="export-backup" type="button">导出笔记备份</button>
+        <label for="import-backup">导入笔记备份</label>
+        <input id="import-backup" type="file" accept="application/json,.json">
+      </div>
+      <p id="import-status" role="status"></p>
+      <p class="hint">导入会替换本课笔记；请先导出需要保留的内容。错误或其他课程的备份会被拒绝。</p>
+    </section>
+  </main>
+</body>
+</html>

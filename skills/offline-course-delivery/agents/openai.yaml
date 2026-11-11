@@ -1,0 +1,4 @@
+interface:
+  display_name: "离线课程交付"
+  short_description: "检查离线课程的资源、依赖与源码一致性，区分静态校验和真实断网验收"
+  default_prompt: "使用 $offline-course-delivery 检查这个课程包，给出本地启动方法、验收结果与离线能力边界。"

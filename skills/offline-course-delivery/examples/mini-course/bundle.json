@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "entry": "index.html",
+  "files": [
+    {
+      "path": "app.js",
+      "sha256": "beef2d97952e33a48b51070a133378cf71369ec51d5aa4647cb57ceb874af05b"
+    },
+    {
+      "path": "index.html",
+      "sha256": "7f0d1a60129f6edaa3e60cc204c45696810f8d4b12ddd854ace5f84c47efce82"
+    },
+    {
+      "path": "numbers.py",
+      "sha256": "0996f678a90e2aa5676385730c5a1602ee697a772c002cf390e35f349314d237"
+    },
+    {
+      "path": "style.css",
+      "sha256": "1f21c15ae7783f35ac7034707958360db0ef2f051f7cc2963ed032a7ba754370"
+    }
+  ],
+  "courses": [
+    {
+      "id": "mean-demo",
+      "page": "index.html",
+      "requires": [],
+      "source": "numbers.py",
+      "downloads": [
+        "numbers.py"
+      ]
+    }
+  ]
+}
