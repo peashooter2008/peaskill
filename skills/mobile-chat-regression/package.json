@@ -1,0 +1,10 @@
+{
+  "name": "@peashooter2008/mobile-chat-regression",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Configurable synthetic mobile chat regression checks",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "dependencies": { "playwright": "1.63.0" }
+}

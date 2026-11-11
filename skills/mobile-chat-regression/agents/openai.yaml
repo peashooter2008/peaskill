@@ -1,0 +1,4 @@
+interface:
+  display_name: "手机聊天回归"
+  short_description: "检查小屏聊天输入、草稿保留与滚动行为，区分模拟视口和真机验收"
+  default_prompt: "请用 $mobile-chat-regression 为这个隔离测试页面适配选择器，并验证小屏布局、草稿和滚动行为。"

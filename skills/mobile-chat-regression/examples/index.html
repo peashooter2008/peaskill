@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>虚构聊天回归样例</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; font: 16px system-ui, sans-serif; background: #f5f3ed; color: #26332f; }
+    body { padding: 8px; }
+    .chat { max-width: 760px; height: 100%; margin: auto; display: flex; flex-direction: column; border: 1px solid #b7c2ba; border-radius: 12px; background: white; overflow: hidden; }
+    header { padding: 10px 14px; border-bottom: 1px solid #d9dfd8; display: flex; gap: 10px; align-items: center; justify-content: space-between; }
+    header h1 { font-size: 16px; margin: 0; }
+    a { color: #19634b; }
+    #history { overflow: auto; flex: 1; min-height: 0; padding: 12px; overflow-wrap: anywhere; }
+    #history p { max-width: 85%; padding: 10px; border-radius: 8px; background: #eff4ef; margin: 0 0 12px; }
+    #history .own { background: #d6efdf; margin-left: auto; white-space: pre-wrap; }
+    form { flex: 0 0 auto; display: flex; gap: 8px; padding: 10px; border-top: 1px solid #d9dfd8; }
+    textarea { flex: 1; min-width: 0; resize: none; height: 64px; padding: 8px; font: inherit; border: 1px solid #899e91; border-radius: 6px; }
+    button { padding: 0 14px; border: 0; border-radius: 6px; color: white; background: #19634b; font: inherit; }
+  </style>
+</head>
+<body>
+  <main class="chat">
+    <header><h1>虚构练习对话</h1><a id="leave" href="help.html">查看说明</a></header>
+    <section id="history" aria-label="聊天记录" tabindex="0"></section>
+    <form id="composer"><textarea id="draft" aria-label="消息草稿" placeholder="仅写入本页，不连接真实服务"></textarea><button id="send" type="submit">发送</button></form>
+  </main>
+  <script>
+    const history = document.querySelector('#history');
+    const draft = document.querySelector('#draft');
+    document.querySelector('#leave').href += location.search;
+    for (let i = 1; i <= 36; i++) {
+      const item = document.createElement('p');
+      item.textContent = `虚构记录 ${i}：这是一条用于滚动与布局检查的合成消息。`;
+      history.append(item);
+    }
+    draft.value = localStorage.getItem('peaskill-demo-draft') || '';
+    draft.addEventListener('input', () => localStorage.setItem('peaskill-demo-draft', draft.value));
+    document.querySelector('#composer').addEventListener('submit', event => {
+      event.preventDefault();
+      if (!draft.value.trim()) return;
+      const item = document.createElement('p');
+      item.className = 'own';
+      item.textContent = draft.value;
+      history.append(item);
+      draft.value = '';
+      localStorage.removeItem('peaskill-demo-draft');
+      history.scrollTop = history.scrollHeight;
+    });
+    history.scrollTop = history.scrollHeight;
+  </script>
+</body>
+</html>
